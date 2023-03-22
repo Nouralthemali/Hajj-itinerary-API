@@ -29,6 +29,10 @@ An open-source relational database management system that provides advanced feat
 
 A popular and user-friendly PostgreSQL client for macOS that allows users to manage and interact with PostgreSQL databases using a visual interface.
 
+### Postman
+
+A popular API development tool used for testing, documenting, and managing APIs.
+
 ## Requirements
 
 You will need Swift 5.2+
