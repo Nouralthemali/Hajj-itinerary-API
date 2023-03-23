@@ -34,10 +34,6 @@ A popular and user-friendly PostgreSQL client for macOS that allows users to man
 
 A popular API development tool used for testing, documenting, and managing APIs.
 
-### JSON 
-
-A common data format used to represent data that is sent and received by the API. It's asy-to-use and supported by different programming languages and platforms.
-
 ## Requirements
 
 You will need Swift 5.2+
