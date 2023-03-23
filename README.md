@@ -34,10 +34,6 @@ A popular and user-friendly PostgreSQL client for macOS that allows users to man
 
 An open-source relational database management system that provides advanced features and scalability for handling complex data storage and retrieval needs.
 
-
-
-<p align="center"> <img width="500" alt="Screenshot 1444-09-01 at 11 15 06 PM" src="https://user-images.githubusercontent.com/105675970/227342209-8051c0c3-f10e-46e1-973f-18c3061e164d.png">
-
 ## Requirements
 
 You will need Swift 5.2+
