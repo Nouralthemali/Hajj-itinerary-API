@@ -1,5 +1,6 @@
-# Hajj-itinerary-Database-System
-This is a database system project using the Vapor framework to manage the information of pilgrims and their Hajj itinerary.
+# Hajj-itinerary API
+A restful API project using the Vapor framework and Postgres database to manage the information of pilgrims and their Hajj itinerary.
+RESTful API is a way of accessing and manipulating data stored in a database or other data source. (not the database itself). This project is a great, easy-to-learn example for those who want to learn how to build RESTful APIs. Whether you are a beginner or an experienced developer!
 
 ## Features
 The project provides the following features:
@@ -15,9 +16,9 @@ The project provides the following features:
 
 ## Tools 🛠️
 
-1-	Download the following:
+Download the following:
 
-### Vapor 
+### Vapor  
 
 A server-side Swift web framework that allows developers to build high-performance web applications and APIs.
 
@@ -33,21 +34,59 @@ A popular and user-friendly PostgreSQL client for macOS that allows users to man
 
 A popular API development tool used for testing, documenting, and managing APIs.
 
+###JSON 
+
+A common data format used to represent data that is sent and received by the API. It's asy-to-use and supported by different programming languages and platforms.
+
 ## Requirements
 
 You will need Swift 5.2+
 
 
 ## Usage
-The project provides the following endpoints:
+The project provides the following tables and their endpoints:
 
-1-	GET /Itinerary: Returns a list of all itinerary items.
+### Object 1: Pilgrim
 
-2-	POST /Itinerary: Creates a new itinerary item.
+| Column Name   |     Type    |
+| ------------- | ----------- | 
+| `id`          | `UUID`      | 
+| `Name`        | `String`    | 
+| `Gender`      | `String`    | 
+| `PNumber`     | `String`    | 
+| `DOB`         | `Date`      |  
+| `Age`         | `Integer`   | 
 
-3-	PATCH /Itinerary/:id : Updates an existing itinerary item by ID.
+- Where `id` is the `PRIMARY KEY` 
 
-4-	DELETE /Itinerary/:id : Deletes an existing itinerary item by ID.
+| Request Method |    Route      | Action                                  |
+| -------------  | ------------- | -------------                           |
+| GET            | /Pilgrim      | Returns a list of all Pilgrim items     |
+| POST           | /pilgrim      | Creates a new Pilgrim item.             |
+| DELETE         | /Pilgrim/:id  | Deletes an existing Pilgrim item by ID. |
+
+
+### Object 2: Itinerary
+
+
+| Column Name   |     Type    |
+| ------------- | ----------- | 
+| `id`          | `UUID`      | 
+| `CurrentL`    | `String`    | 
+| `Transport`   | `String`    | 
+| `Type`        | `String`    | 
+| `Dstart`      | `Date`      |  
+| `Dend`        | `Date`      | 
+| `pilgrim_id`  | `UUID`      |
+
+- Where `id` is the `PRIMARY KEY` , and `pilgrim_id` is a `FOREIGN KEY`
+
+| Request Method| Route         | Action                                         |
+| ------------- | ------------- | -------------                                  |
+| GET           | /Itinerary    | Returns a list of all itinerary items          |
+| POST          | /Itinerary    | Creates a new itinerary item.                  |
+| PUT           | /Itinerary/:id| Updates an existing itinerary item’s type by ID|
+| DELETE        | /Itinerary:id | Deletes an existing itinerary item by ID.      |
 
 
 All endpoints support JSON encoding and decoding of each Itinerary and Pilgrim items. 
