@@ -42,7 +42,7 @@ You will need Swift 5.2+
 ## Usage
 The project provides the following tables and their endpoints:
 
-### Object 1: Pilgrim
+### 1: Pilgrim
 
 | Column Name   |     Type    |
 | ------------- | ----------- | 
@@ -62,7 +62,7 @@ The project provides the following tables and their endpoints:
 | DELETE         | /Pilgrim/:id  | Deletes an existing Pilgrim item by ID. |
 
 
-### Object 2: Itinerary
+### 2: Itinerary
 
 
 | Column Name   |     Type    |
